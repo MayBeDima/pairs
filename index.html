@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Pairs</title>
+
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./pairs-app.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <form class="form">
+      <div class="form__box">
+        <p class="paragraph">Выберите уровень</p>
+        <select name="levels" id="rows-cols">
+          <option value="1" data-rows="2" data-cols="2">Уровень 1 (4 карточки)</option>
+          <option value="2" data-rows="2" data-cols="4">Уровень 2 (8 карточек)</option>
+          <option value="3" data-rows="3" data-cols="4">Уровень 3 (12 карточек)</option>
+          <option value="4" data-rows="4" data-cols="4">Уровень 4 (16 карточек)</option>
+          <option value="5" data-rows="4" data-cols="5">Уровень 5 (20 карточек)</option>
+          <option value="6" data-rows="4" data-cols="6">Уровень 6 (24 карточки)</option>
+          <option value="7" data-rows="6" data-cols="6">Уровень 7 (36 карточек)</option>
+          <option value="8" data-rows="6" data-cols="8">Уровень 8 (48 карточек)</option>
+          <option value="9" data-rows="7" data-cols="8">Уровень 9 (56 карточек)</option>
+          <option value="10" data-rows="8" data-cols="8">Уровень 10 (64 карточки)</option>
+          <option value="11" data-rows="8" data-cols="9">Уровень 11 (72 карточки)</option>
+          <option value="12" data-rows="8" data-cols="10">Уровень 12 (80 карточек)</option>
+          <option value="13" data-rows="9" data-cols="10">Уровень 13 (90 карточек)</option>
+          <option value="14" data-rows="10" data-cols="10">Уровень 14 (100 карточек)</option>
+        </select>
+        <button class="btn btn-start" id="btn-start" type="button">Начать игру</button>
+        <button class="btn btn-end" id="btn-end" type="button" disabled>Закончить игру</button>
+        <input type="text" class="player" id="player" maxlength="7" placeholder="Введите имя">
+        <button class="btn btn-results" id="btn-results" type="button">Показать результаты</button>
+      </div>
+    </form>
+
+    <ul class="card__list" id="list">
+
+    </ul>
+
+    <div class="congrats">
+      <ol class="results">
+      </ol>
+      <div class="congrats__message">
+        ПОЗДРАВЛЯЕМ! <br>
+        Вы справились!
+        <p>Текущий результат: <span id="current"></span></p>
+      </div>
+    </div>
+
+    <div class="block-again">
+      <button class="btn-again btn" id="btn-again">
+        Играть еще раз
+      </button>
+    </div>
+
+    <div class="current-result-box">
+      <div class="timer-box">
+        <p class="timer-text">
+          Таймер: &nbsp;
+        </p>
+        <p class="timer timer-text">
+          0
+        </p>
+      </div>
+      <div class="move-box">
+        <p class="move-text">
+          Ходы: &nbsp;
+        </p>
+        <p class="move move-text">
+          0
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
